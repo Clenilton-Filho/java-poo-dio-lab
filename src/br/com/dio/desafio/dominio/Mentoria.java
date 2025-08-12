@@ -1,25 +1,16 @@
 package br.com.dio.desafio.dominio;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
-public class Mentoria {
+public class Mentoria extends Conteudo {
 
-    private String titulo;
-    private String descricao;
-    private LocalDate data;
+    private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-    public String getTitulo() {
-        return titulo;
-    }
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-    public String getDescricao() {
-        return descricao;
-    }
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
+    private LocalDate data = LocalDate.now();
+
+    private String dataString = data.format(formatter);
+
     public LocalDate getData() {
         return data;
     }
@@ -28,8 +19,13 @@ public class Mentoria {
     }
 
     @Override
+    public double calcularXp() {
+        return XP_PADRAO + 20d; // Mentoria tem um XP adicional
+    }
+
+    @Override
     public String toString() {
-        return "Mentoria {titulo=" + titulo + ", descricao=" + descricao + ", data=" + data + "}";
+        return String.format("\nTítulo: %s. Descricao: %s. Data: %s", getTitulo(), getDescricao(), dataString);
     }
 
 

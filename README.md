@@ -1,18 +1,13 @@
-## Getting Started
+## 👀 Visualização das Funcionalidades no Terminal
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Para visualizar as funcionalidades do projeto no terminal, foram implementados métodos de teste nas classes principais. Basta executar a classe `Main` para interagir com os exemplos e verificar o funcionamento dos conceitos de POO aplicados.
 
-## Folder Structure
+```bash
+# Compilar o projeto
+javac src/Main.java
 
-The workspace contains two folders by default, where:
+# Executar o projeto
+java src.Main
+```
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+As saídas exibidas no terminal demonstram o uso de herança, polimorfismo, encapsulamento e abstração conforme proposto nos exercícios.
